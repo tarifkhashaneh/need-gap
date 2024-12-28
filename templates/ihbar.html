@@ -780,18 +780,18 @@
 
         function newKayipForm(counter) {
             return `<div class="form-group">
-                  <label for="example4">İsim:</label>
-                  <input required name="kayip_first_name" type="text" class="form-control" placeholder="İsim:">
+                  <label for="example4">اسم الاحتياج:</label>
+                  <input required name="kayip_first_name" type="text" class="form-control" placeholder="الاسم:">
                 </div>
                 <div class="form-group">
-                    <label for="example5">Soyisim:</label>
-                    <input required name="kayip_last_name" type="text" class="form-control" placeholder="Soyisim:">
+                    <label for="example5">تفصيل :</label>
+                    <input required name="kayip_last_name" type="text" class="form-control" placeholder="تفصيل :">
                   </div>
                   <select class="form-control" style="width:100%;margin:5px auto" name="gender">
-                    <option value="M" class="form-control form-control-lg" >Male</option>
-                    <option value="F" class="form-control form-control-lg" >Female</option>
+                    <option value="M" class="form-control form-control-lg" >عاجل</option>
+                    <option value="F" class="form-control form-control-lg" >ضروري</option>
                     </select>
-                    <input style="width:100%;margin:5px 0" type="text" class="form-control" name="age" placeholder="Age"/>
+                    <input style="width:100%;margin:5px 0" type="text" class="form-control" name="age" placeholder="الاهمية من 1-5"/>
                     <br>
                   <select class="form-control" name="kayip_status" class="form-group" style="width:100%">
                   {% for status in kayip_status %}
@@ -808,7 +808,7 @@
                   ${
                 counter == 1
                     ? `<div class="form-group">
-                          <label for="example7">Adres:</label>
+                          <label for="example7">علامات تفصيلية:</label>
                           <textarea required name="address" class="form-control" id="" cols="30" rows="5"></textarea>
                         </div>`
                     : `<div></div>`
@@ -818,7 +818,7 @@
                   ${
                 counter == 1 &&
                 `<div class="form-group">
-                          <label for="example8">Açıklama:</label>
+                          <label for="example8">ملاحظات اخرى:</label>
                           <textarea  name="detail" class="form-control" id="" cols="30" rows="5"></textarea>
                         </div>`
             }
