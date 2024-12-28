@@ -27,9 +27,9 @@
         <div class="form-head ">
             <img src="{% static 'images/form-logo.png' %}" alt="form-logo" class="form-logo" />
             <div>
-                <h1 class="form-title">Needs Syria Form</h1>
+                <h1 class="form-title">احتياج سوريا</h1>
                 <p class="form-text">
-                    Form to report needs near you
+                    نموذج لتسجيل و الابلاغ عن احتياج قريب منك
                 </p>
             </div>
 
@@ -40,40 +40,40 @@
                 <input type="hidden" id="coordinate_x" name="cordinate_x" />
                 <input type="hidden" id="coordinate_y" name="cordinate_y" />
 
-                <label for="fname"> Need Name</label><br>
+                <label for="fname"> اسم الاحتياج</label><br>
                 <input required type="text" id="" name="kayip_first_name"><br>
-                <label for="fname">Need Description</label><br>
+                <label for="fname">الوصف</label><br>
                 <input required type="text" id="" name="kayip_last_name"><br>
 
-                // <label for="fname">Country</label><br>
+                <label for="fname">الدولة</label><br>
 
-                // <select id="country" name="country"  class="form-select form-select-sm"
+                <select id="country" name="country"  class="form-select form-select-sm"
                     aria-label=".form-select-sm example">
 
 
                 </select><br>
-                <label for="fname">City</label><br>
+                <label for="fname">المدينة</label><br>
                 <select required id="cityselect" name="city"
                     class="form-select form-select-sm" aria-label=".form-select-sm example">
 
 
 
-               // </select><br>
+              </select><br>
 
-                <label for="lname">Age</label><br>
+                <label for="lname">القرية</label><br>
                 <input type="text" name="age"><br><br>
                 <p>Gender</p>
                 <div>
-                    <select class="gender" name="gender" aria-labelledby="dropdownMenu2">
-                        <option value="M" type="button">Male</option>
-                        <option value="F" type="button">Female</option>
+                    <select class="الأهمية " name="gender" aria-labelledby="dropdownMenu2">
+                        <option value="M" type="button">عاجل</option>
+                        <option value="F" type="button">ضروري</option>
                     </select>
                // </div>
                
                 
                 <p>Condition</p>
                 <div>
-                    <select class="condition" name="kayip_status" aria-labelledby="dropdownMenu2">
+                    <select class="نوع الاحتياج" name="kayip_status" aria-labelledby="dropdownMenu2">
                         {% for status in kayipstatus %}
                         <option id="status{{ status.id }}" value="{{ status.id }}" type="button">{{ status }}</option>
                         {% endfor %}
@@ -81,25 +81,25 @@
                 </div>
 
 
-                <label for="lname">Address</label><br>
+                <label for="lname">اعلامات تفصيلية</label><br>
                 <textarea required name="address" style="resize:none; margin-bottom: 65px;" cols="66"
                     rows="3"></textarea>
 
-                <label for="lname">Additional Notes</label><br>
+                <label for="lname">ملاحظات اخرى</label><br>
                 <textarea name="detail" style="resize:none; margin-bottom: 65px;" cols="66" rows="3"></textarea>
-                <label for="lname">Reporter Name</label><br>
+                <label for="lname">الاسم الاول للمبلغ</label><br>
                 <input required type="text" name="ihbar_first_name"><br><br>
-                <label for="lname">Reporter Last Name</label><br>
+                <label for="lname">عائلة المبلغ</label><br>
                 <input required type="text" name="ihbar_last_name"><br><br>
-                <label for="lname">Reporter Phone</label><br>
+                <label for="lname">رقم الهاتف</label><br>
                 <input required type="text" name="phonenumber"><br><br>
-                <label for="lname">Reporter Email</label><br>
+                <label for="lname">الايميل </label><br>
                 <input required type="text" name="eposta"><br><br>
 
                 <div style="color:red">{{ errors.errors }}</div>
 
 
-                <input id="submitbutton" class="btn btn-danger btn-sm w-25 py-2 h-100" type="submit" value="Submit">
+                <input id="submitbutton" class="btn btn-danger btn-sm w-25 py-2 h-100" type="submit" value="الارسال ">
 
             </form>
         </div>
@@ -207,7 +207,7 @@
         function googleTranslateElementInit() {
             new google.translate.TranslateElement(
                 {
-                    pageLanguage: "tr",
+                    pageLanguage: "ar",
                     includedLanguages: "ar,tr,en", layout: google.translate.TranslateElement.InlineLayout.SIMPLE
                 },
                 "google_translate_element"
