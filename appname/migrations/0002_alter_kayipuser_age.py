@@ -13,6 +13,6 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='kayipuser',
             name='age',
-            field=models.CharField(blank=True, max_length=75, null=True),
+            field=models.CharField(blank=True, max_length=5, null=True),
         ),
     ]
