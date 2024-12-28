@@ -84,7 +84,7 @@ class KayipUser(models.Model):
     status = models.TextField(null=True,blank=True)
     kayip_status = models.ForeignKey(KayipStatus,on_delete=models.CASCADE,null=True,blank=True,related_name="kayiplar")
     gender = models.CharField(max_length=1,choices=GENDER_CHOICES,null=True,blank=True)
-    age = models.CharField(null=True,blank=True,max_length=75)
+    age = models.CharField(null=True,blank=True,max_length=5)
     city = models.ForeignKey(Cities,on_delete=models.CASCADE,null=True,blank=True)
 
 
