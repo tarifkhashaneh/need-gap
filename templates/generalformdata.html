@@ -62,18 +62,19 @@
 
                 <label for="lname">القرية</label><br>
                 <input type="text" name="age"><br><br>
-                <p>Gender</p>
+               
+                <p>الأهمية</p>
                 <div>
-                    <select class="الأهمية " name="gender" aria-labelledby="dropdownMenu2">
+                    <select class="gender" name="gender" aria-labelledby="dropdownMenu2">
                         <option value="M" type="button">عاجل</option>
                         <option value="F" type="button">ضروري</option>
                     </select>
-               // </div>
+                </div>
                
                 
-                <p>Condition</p>
+                <p>نوع الاحتياج</p>
                 <div>
-                    <select class="نوع الاحتياج" name="kayip_status" aria-labelledby="dropdownMenu2">
+                    <select class="condition" name="kayip_status" aria-labelledby="dropdownMenu2">
                         {% for status in kayipstatus %}
                         <option id="status{{ status.id }}" value="{{ status.id }}" type="button">{{ status }}</option>
                         {% endfor %}
@@ -81,7 +82,7 @@
                 </div>
 
 
-                <label for="lname">اعلامات تفصيلية</label><br>
+                <label for="lname">علامات تفصيلية</label><br>
                 <textarea required name="address" style="resize:none; margin-bottom: 65px;" cols="66"
                     rows="3"></textarea>
 
@@ -89,13 +90,11 @@
                 <textarea name="detail" style="resize:none; margin-bottom: 65px;" cols="66" rows="3"></textarea>
                 <label for="lname">الاسم الاول للمبلغ</label><br>
                 <input required type="text" name="ihbar_first_name"><br><br>
-                <label for="lname">عائلة المبلغ</label><br>
+                <label for="lname">اسم عائلة المبلغ</label><br>
                 <input required type="text" name="ihbar_last_name"><br><br>
                 <label for="lname">رقم الهاتف</label><br>
                 <input required type="text" name="phonenumber"><br><br>
-                <label for="lname">الايميل </label><br>
-                <input required type="text" name="eposta"><br><br>
-
+                
                 <div style="color:red">{{ errors.errors }}</div>
 
 
