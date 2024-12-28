@@ -1,5 +1,5 @@
 // center of the map
-var center = [38.286, 35.681];
+var center = [34.731, 36.710];
 
 // Create the map
 var map = L.map('map').setView(center, 9);
@@ -31,11 +31,11 @@ var selectedCountry = -1;
 var allData = [];
 
 let values = {
-    1: {status: "At Hospital", icon: greenIcon, color: "green"},
-    2: {status: "Missing", icon: redIcon, color: "red"},
-    3: {status: "Found", icon: yellowIcon, color: "yellow"},
-    4: {status: "In Need of Help", icon: blueIcon, color: "blue"},
-    5: {status: "Needs a Shelter", icon: purpleIcon, color: "purple"},
+    1: {status: "Build", icon: greenIcon, color: "green"},
+    2: {status: "Risk", icon: redIcon, color: "red"},
+    3: {status: "Aid", icon: yellowIcon, color: "yellow"},
+    4: {status: "In Need", icon: blueIcon, color: "blue"},
+    5: {status: "War", icon: purpleIcon, color: "purple"},
     6: {status: "Unknown", icon: orangeIcon, color: "orange"}
 }
 
@@ -110,36 +110,36 @@ function getMarkerData(e) {
     fetch("api/kayiplar/" + id)
         .then((response) => response.json())
         .then((i) => {
-            let val = '<div class="row"><div id="data-modal" class="col-12"><h3>Kayıp Bilgileri</h3></div><div class="col-12"><h5>isim:' +
+            let val = '<div class="row"><div id="data-modal" class="col-12"><h3>معلومات الاحتياج</h3></div><div class="col-12"><h5>الأسم:' +
                 " " +
                 (i.kayip_user[0].kayip_first_name) +
                 " " +
                 (i.kayip_user[0].kayip_last_name) +
-                '</h5></div><div id="data-modal" class="col-12"><h5>Adres:' +
+                '</h5></div><div id="data-modal" class="col-12"><h5>العنوان:' +
                 " " +
-                i.kayip_user[0].address + '</h5></div>' + '<div id="data-modal" class="col-12"><h5>Durum:' +
+                i.kayip_user[0].address + '</h5></div>' + '<div id="data-modal" class="col-12"><h5>الحالة:' +
                 " " +
                 values[i.kayip_user[0].kayip_status]?.status +
-                '</h5></div>' + '<div id="data-modal" class="col-12"><h5>Kişi Sayısı:' +
+                '</h5></div>' + '<div id="data-modal" class="col-12"><h5>عدد الاحتياجات:' +
                 " " +
                 i.kayip_user.length +
-                '</h5></div>' + '<div id="data-modal" class="col-12"><h5>Cinsiyet:' +
+                '</h5></div>' + '<div id="data-modal" class="col-12"><h5>الأهمية:' +
                 " " +
-                (i.kayip_user[0].gender == 'F' ? 'Kadın' : 'Erkek') +
-                '</h5></div><div id="data-modal" class="col-12"><h5>Detay:' +
+                (i.kayip_user[0].gender == 'F' ? 'ضروري' : 'عاجل') +
+                '</h5></div><div id="data-modal" class="col-12"><h5>تفاصيل:' +
                 " " +
                 i.kayip_user[0].detail +
                 '</h5></div><button style="margin:3px auto; width:130px; height:40px; border-radius:6px; background:#28a745; border:none; color:white; padding:10px;font-size:16px; text-align:center;"' +
-                ' onclick="window.open(\'http://www.google.com/maps/place/' + i.kayip_user[0]?.cordinate_x + ',' + i.kayip_user[0]?.cordinate_y + '\' ,\'_blank\');">Konuma Git' +
-                '</button><div style="border-top:1px solid gray;padding-top:5px;" class="col-12"><h4>İhbar Eden Bilgisi</h4>' +
+                ' onclick="window.open(\'http://www.google.com/maps/place/' + i.kayip_user[0]?.cordinate_x + ',' + i.kayip_user[0]?.cordinate_y + '\' ,\'_blank\');">الذهاب للموقع' +
+                '</button><div style="border-top:1px solid gray;padding-top:5px;" class="col-12"><h4>معلومات المبلغ</h4>' +
                 '</div>' +
-                '<div id="data-modal" class="col-12"><h6>isim:' +
+                '<div id="data-modal" class="col-12"><h6>الأسم:' +
                 " " +
                 (i.ihbar_user.ihbar_first_name) +
                 " " +
                 (i.ihbar_user.ihbar_last_name) +
                 '</h6></div>' +
-                '<div class="col-12"><h6>Telefon:' +
+                '<div class="col-12"><h6>رقم الهاتف:' +
                 " " +
                 (i.ihbar_user.phonenumber) +
                 '</h6></div></div>';
@@ -172,7 +172,7 @@ document.getElementsByClassName('leaflet-draw-draw-marker')[0].style.scale = '1.
 let newDiv = document.createElement("div");
 
 // and give it some content
-const newContent = document.createTextNode("Konum Seç");
+const newContent = document.createTextNode("حدد الموقع");
 newDiv.style.position = "absolute";
 newDiv.style.right = "0px";
 newDiv.style.width = "113px";
@@ -214,11 +214,13 @@ function setSelected(id) {
 function setSelectedCountry(id) {
     var polygonPoints = {
         2: [
-            [36.07538422941732, 37.994225034592425],
+           [36.07538422941732, 37.994225034592425],
             [36.18091040353196, 39.72534001336037],
             [34.540172959444554, 39.96051035009866],
             [34.93205872605833, 37.98116001588474]],
-        1: [[38.21680877405232, 34.71204528737725],
+        1: [
+
+            [38.21680877405232, 34.71204528737725],
             [38.09154169736558, 38.6341641679324],
             [36.50984563750561, 38.4583829295882],
             [36.558397114119714, 35.55249933321049]]
