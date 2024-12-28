@@ -1,10 +1,10 @@
 {% load static %}
-<html lang="tr">
+<html lang="ar">
 <head>
     <meta charset="UTF-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Needs Syria</title>
+    <title>احتياج سوريا</title>
     <link rel="icon" type="image/x-icon" href="{% static 'images/favicon.ico' %}">
     <link
             rel="stylesheet"
@@ -471,7 +471,7 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav" style="display: flex;align-items: center;">
-            <h1 class="navbar-logo">Needs Syria</h1>
+            <h1 class="navbar-logo">احتياج سوريا</h1>
             {#Search#}
             <div style="width:300px;height:100%;position: relative">
                 <div class="input-group " style="
@@ -496,10 +496,10 @@
             </div>
             <div class="nav-text" style="display: flex;align-items: center;">
                 <button id="nav_btn_1" class="navbar-info btn btn-success" style="background: #da1e37;border:none;">
-                    Bilgi Al
+                    الحصول على معلومات
                 </button>
                 <button id="nav_btn_2" class="navbar-info btn btn-success" onclick="window.open('/genelform', '_blank')"
-                        style="background: #da1e37;border:none;">Kayıp Formu Doldur
+                        style="background: #da1e37;border:none;">تسجيل احتياج جديد
                 </button>
                 <a
                         class="nav-item nav-link"
@@ -549,51 +549,51 @@
               "
                         data-dismiss="modal"
                 >
-                    X
+                   اغلاق
                 </div>
-                <h1>İhbar </h1>
+                <h1>بلاغ </h1>
                 <hr/>
                 <div class="form-group">
-                    <label for="example1">İsim:</label>
+                    <label for="example1">اسم المبلغ:</label>
                     <input
                             required
                             name="ihbar_first_name"
                             type="text"
                             class="form-control"
-                            placeholder="İsim:"
+                            placeholder=" اسم المبلغ:"
                     />
                 </div>
                 <div class="form-group">
-                    <label for="example2">Soyisim:</label>
+                    <label for="example2">اسم العائلة: </label>
                     <input
                             required
                             name="ihbar_last_name"
                             type="text"
                             class="form-control"
-                            placeholder="Soyisim:"
+                            placeholder="اسم العائلة:"
                     />
                 </div>
                 <div class="form-group">
-                    <label for="example2">Telefon Numarası:</label>
+                    <label for="example2">رقم الهاتف:</label>
                     <input
                             required
                             name="phonenumber"
                             type="tel"
                             class="form-control"
-                            placeholder="555-432-11-00"
+                            placeholder="94567890123"
                     />
                 </div>
                 <div class="form-group">
-                    <label for="example3">E-posta:</label>
+                    <label for="example3">البريد الالكتروني:</label>
                     <input
                             name="eposta"
                             type="email"
                             class="form-control"
-                            placeholder="E-posta:"
+                            placeholder="البريد الالكتروني:"
                     />
                 </div>
                 <div class="form-group">
-                    <label for="example3">Konum:</label>
+                    <label for="example3">الموقغ:</label>
                     <select id="country" name="country" class="form-control form-control-lg"
                     aria-label=".form-select-sm example"> </select><br>
 
@@ -605,11 +605,11 @@
                     </select><br>
                 </div>
 
-                <h1>Yeni ihtiyaç</h1>
+                <h1>احتياج جديد</h1>
                 <hr/>
 
                 <button type="button" id="yenikayipadd" class="btn btn-primary mb-3">
-                    Yeni Ekle
+                    تسجيل جديد
                 </button>
 
                 <input type="hidden" name="cordinate_x" id="cordinate_x"/>
@@ -622,7 +622,7 @@
                         type="submit"
                         class="btn btn-primary mb-3"
                 >
-                    Gönder
+                    التسجيل
                 </button>
             </div>
         </form>
