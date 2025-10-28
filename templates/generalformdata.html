@@ -27,9 +27,9 @@
         <div class="form-head ">
             <img src="{% static 'images/form-logo.png' %}" alt="form-logo" class="form-logo" />
             <div>
-                <h1 class="form-title">احتياج سوريا</h1>
+                <h1 class="form-title">فعاليات بالمراكز الثقافية</h1>
                 <p class="form-text">
-                    نموذج لتسجيل و الابلاغ عن احتياج قريب منك
+                    نموذج لتسجيل و الابلاغ عن فعالية قريبة منك
                 </p>
             </div>
 
@@ -40,7 +40,7 @@
                 <input type="hidden" id="coordinate_x" name="cordinate_x" />
                 <input type="hidden" id="coordinate_y" name="cordinate_y" />
 
-                <label for="fname"> اسم الاحتياج</label><br>
+                <label for="fname"> اسم الفعالية</label><br>
                 <input required type="text" id="" name="kayip_first_name"><br>
                 <label for="fname">الوصف</label><br>
                 <input required type="text" id="" name="kayip_last_name"><br>
@@ -88,11 +88,11 @@
 
                 <label for="lname">ملاحظات اخرى</label><br>
                 <textarea name="detail" style="resize:none; margin-bottom: 65px;" cols="66" rows="3"></textarea>
-                <label for="lname">الاسم الاول للمبلغ</label><br>
+                <label for="lname">اسم الفعالية</label><br>
                 <input required type="text" name="ihbar_first_name"><br><br>
-                <label for="lname">اسم عائلة المبلغ</label><br>
+                <label for="lname">عنوان الفعالية</label><br>
                 <input required type="text" name="ihbar_last_name"><br><br>
-                <label for="lname">رقم الهاتف</label><br>
+                <label for="lname">مدة الفعالية</label><br>
                 <input required type="text" name="phonenumber"><br><br>
                 
                 <div style="color:red">{{ errors.errors }}</div>
