@@ -29,7 +29,7 @@
             <div>
                 <h1 class="form-title">فعاليات بالمراكز الثقافية</h1>
                 <p class="form-text">
-                    نموذج لتسجيل و الابلاغ عن فعالية قريبة منك
+                    نموذج لتسجيل عن فعالية قريبة منك
                 </p>
             </div>
 
@@ -60,19 +60,19 @@
 
               </select><br>
 
-                <label for="lname">القرية</label><br>
+                <label for="lname">المركز</label><br>
                 <input type="text" name="age"><br><br>
                
-                <p>الأهمية</p>
+                <p>النوع </p>
                 <div>
                     <select class="gender" name="gender" aria-labelledby="dropdownMenu2">
-                        <option value="M" type="button">عاجل</option>
-                        <option value="F" type="button">ضروري</option>
+                        <option value="M" type="button">داخلية </option>
+                        <option value="F" type="button">خارجية </option>
                     </select>
                 </div>
                
                 
-                <p>نوع الاحتياج</p>
+                <p>المرحلة </p>
                 <div>
                     <select class="condition" name="kayip_status" aria-labelledby="dropdownMenu2">
                         {% for status in kayipstatus %}
@@ -207,7 +207,7 @@
             new google.translate.TranslateElement(
                 {
                     pageLanguage: "ar",
-                    includedLanguages: "ar,tr,en", layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+                    includedLanguages: "ar,en", layout: google.translate.TranslateElement.InlineLayout.SIMPLE
                 },
                 "google_translate_element"
             );
