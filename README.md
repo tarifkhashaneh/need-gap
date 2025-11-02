@@ -1,7 +1,7 @@
-# Needs Map 
+# Map of cultural centers in Syria 
 
-Needs Map
-A  project aimed at locating the missing gaps after freedome Sryia become real in in 8.12.2021
+Map of cultural centers in Syria
+A  project aimed at locating the Events at cultural centers after freedome Sryia become real in in 8.12.2021
 
 The project emerged after Syria become free, which there is alot of needes to be located . We launched a technology platform to coordinate devlopment efforts.
 
@@ -12,7 +12,7 @@ https://Smart-Syria.com/
 
 ## Project features
 
- - Pin on the map to notice a a need:
+ - Pin on the map to notice a Events at cultural centers:
 Where the contrbuter of the need can put a pin on the map for the place with there with name, description, and phone number.
 
  - Search on map 
@@ -20,11 +20,11 @@ NGOs can browse the map and search for the related quilfecations in the area whe
 
  - Add a go-to location button, a link showing the location on google maps 
  
- - Allow adding multiple needes in one pin (need for Schools Hospital .... )
+ - Allow adding multiple Events at cultural centers in one pin (Events at cultural centers
  
  - Automatically update an excel sheet on every new change in dB
  
- - Add new pins type (scholl, in hospital, need help, found), thess pins shows with 4 differnt collers on map
+ - Add new pins type (Events at cultural centers), thess pins shows with 4 differnt collers on map
  
  - Updating state is ready as backend through Gmail authentication, the person who made the report can update the status (only backend needs a frontend)
  
