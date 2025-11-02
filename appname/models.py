@@ -71,8 +71,8 @@ class IhbarUser(models.Model):
 
 class KayipUser(models.Model):
     GENDER_CHOICES = (
-        ('M', 'عاجل'),
-        ('F', 'ضروري'),
+        ('M', 'داخلي'),
+        ('F', 'خارجي'),
     )
     kayip_first_name = models.CharField(max_length=100,db_index=True)
     kayip_last_name = models.CharField(max_length=100)
