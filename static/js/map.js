@@ -110,7 +110,7 @@ function getMarkerData(e) {
     fetch("api/kayiplar/" + id)
         .then((response) => response.json())
         .then((i) => {
-            let val = '<div class="row"><div id="data-modal" class="col-12"><h3>معلومات الاحتياج</h3></div><div class="col-12"><h5>الأسم:' +
+            let val = '<div class="row"><div id="data-modal" class="col-12"><h3>معلومات الفعالية</h3></div><div class="col-12"><h5>الأسم:' +
                 " " +
                 (i.kayip_user[0].kayip_first_name) +
                 " " +
@@ -120,12 +120,12 @@ function getMarkerData(e) {
                 i.kayip_user[0].address + '</h5></div>' + '<div id="data-modal" class="col-12"><h5>الحالة:' +
                 " " +
                 values[i.kayip_user[0].kayip_status]?.status +
-                '</h5></div>' + '<div id="data-modal" class="col-12"><h5>عدد الاحتياجات:' +
+                '</h5></div>' + '<div id="data-modal" class="col-12"><h5>عدد الفعاليات:' +
                 " " +
                 i.kayip_user.length +
-                '</h5></div>' + '<div id="data-modal" class="col-12"><h5>الأهمية:' +
+                '</h5></div>' + '<div id="data-modal" class="col-12"><h5>النوع :' +
                 " " +
-                (i.kayip_user[0].gender == 'F' ? 'ضروري' : 'عاجل') +
+                (i.kayip_user[0].gender == 'F' ? 'داخلي ' : 'خارجي ') +
                 '</h5></div><div id="data-modal" class="col-12"><h5>تفاصيل:' +
                 " " +
                 i.kayip_user[0].detail +
@@ -133,7 +133,7 @@ function getMarkerData(e) {
                 ' onclick="window.open(\'http://www.google.com/maps/place/' + i.kayip_user[0]?.cordinate_x + ',' + i.kayip_user[0]?.cordinate_y + '\' ,\'_blank\');">الذهاب للموقع' +
                 '</button><div style="border-top:1px solid gray;padding-top:5px;" class="col-12"><h4>معلومات المبلغ</h4>' +
                 '</div>' +
-                '<div id="data-modal" class="col-12"><h6>الأسم:' +
+                '<div id="data-modal" class="col-12"><h6>اسم الفعالية :' +
                 " " +
                 (i.ihbar_user.ihbar_first_name) +
                 " " +
